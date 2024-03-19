@@ -1,0 +1,91 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    font-family: "outfit";
+}
+
+header, nav, main, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+nav {
+    background-color: orange;
+    color: white;
+} 
+
+main {
+    background-color: gray;
+    color: white;
+    align-items: start;
+    padding: 20px;
+} 
+
+aside {
+    background-color: pink;
+    display: none;
+    color: white;
+    align-items: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "header header header header"
+        "aside nav nav nav"
+        "aside main main main"
+        "footer footer footer footer"
+        ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: aside;
+        display: block;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    nav, main, aside {
+        height: unset;
+    }
+
+}

@@ -1,0 +1,181 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.top {
+    background-color: rgb(228, 235, 235);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-family: amita;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100px;
+}
+
+a{
+    margin: 8px;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: scope one;
+    color: black;
+
+}
+
+.navigation {
+    display: none;
+
+}
+
+article {
+    background-color: rgb(228, 235, 235);
+}
+
+
+.lines div {
+    height: 4px;
+    background-color: white;
+    margin: 8px 0;
+    border-radius: 100px;
+    width: 40px;
+}
+
+img {
+    width: 90%;
+    padding-bottom: 15px;
+}
+
+.navigation {
+    align-items:flex-end;
+}
+
+
+@media screen and (min-width: 768px) {
+    .lines div {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: flex-end;
+        color: black;
+    }
+
+    .top {
+        padding: 0 60px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-areas: 
+        "cph market"
+        "egypt ist"
+        "skiing ist"
+        "prague prague";
+        justify-items: center;
+        gap: 5px;
+        padding: 40px 80px;
+    }
+
+    img {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+    .cph {
+        grid-area: cph;
+        gap: 10px;
+    }
+
+    .prague {
+        grid-area: prague;
+    }
+
+    .egypt {
+        grid-area: egypt;
+    }
+
+    .ist {
+        grid-area: ist;
+    }
+
+    .puppy {
+        grid-area: puppy;
+    }
+
+    .skiing {
+        grid-area: skiing;
+    }
+
+    .market {
+        grid-area: market;
+    }
+
+@media screen and (min-width: 1440px) {
+
+    .gallery {
+        display: grid;
+        grid-template-areas: 
+        "cph skiing skiing"
+        "egypt egypt ist"
+        "market prague prague"
+        "croatia croatia croatia"
+        ;
+        justify-items: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .cph {
+        grid-area: cph;
+        gap: 10px;
+    }
+
+    .croatia {
+        grid-area: croatia;
+    }
+
+    .egypt {
+        grid-area: egypt;
+    }
+
+    .ist {
+        grid-area: ist;
+    }
+
+    .prague {
+        grid-area: prague;
+    }
+
+    .skiing {
+        grid-area: skiing;
+    }
+
+    .market {
+        grid-area: market;
+    }
+}
